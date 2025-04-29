@@ -1,16 +1,16 @@
-# Auto Presensi Bot
+# SPADA Auto Presensi
 
-Bot Python untuk login ke SPADA dan klik presensi otomatis, dengan notifikasi via Telegram.
+## Cara Pakai
 
-## Fitur
-- Otomatis login dan klik presensi SPADA
-- Penjadwalan harian
-- Notifikasi ke Telegram
+1. Buat file `.env` dari `.env.example` dan isi sesuai kredensial kamu.
+2. Jalankan dengan `python main.py`
+3. Gunakan Railway atau Render untuk hosting otomatis.
 
-## Cara Install
-1. Clone repositori ini
-2. Jalankan: `pip install -r requirements.txt`
-3. Salin `.env.example` menjadi `.env` dan isi token Telegram
-4. Jalankan bot: `python scheduler.py`
+## Format `.env`
 
-Siap dipakai di Railway atau platform lain yang mendukung Procfile.
+```
+SPADA_USERNAME=123240039
+SPADA_PASSWORD=Mahendrarajwa@8
+TELEGRAM_BOT_TOKEN=xxx
+TELEGRAM_CHAT_ID=xxx
+```
