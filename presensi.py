@@ -18,7 +18,7 @@ def auto_presensi(keterangan=""):
             options.add_argument("--no-sandbox")
             driver = webdriver.Chrome(options=options)
 
-            driver.get("https://spada.example.com")  # Ganti dengan URL asli SPADA
+            driver.get("https://spada.upnyk.ac.id/")  # Ganti dengan URL asli SPADA
 
             driver.find_element("id", "username").send_keys(USERNAME)
             driver.find_element("id", "password").send_keys(PASSWORD)
@@ -28,12 +28,9 @@ def auto_presensi(keterangan=""):
 
             # Tambahkan logika klik presensi sesuai kebutuhan
 
-            send_telegram_message(f"✅ Presensi otomatis berhasil
-📝 {keterangan}")
+            send_telegram_message(f"✅ Presensi otomatis berhasil📝 {keterangan}")
             driver.quit()
             break
         except Exception as e:
             if attempt == 2:
-                send_telegram_message(f"❌ Gagal presensi setelah 3 percobaan
-📝 {keterangan}
-Error: {str(e)}")
+                send_telegram_message(f"❌ Gagal presensi setelah 3 percobaan📝 {keterangan}Error: {str(e)}")
